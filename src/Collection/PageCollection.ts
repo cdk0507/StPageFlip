@@ -58,7 +58,7 @@ export abstract class PageCollection {
 
         let start = 0;
         if (this.isShowCover) {
-            this.pages[0].setDensity(PageDensity.HARD);
+            this.pages[0].setDensity(PageDensity.SOFT);
             this.landscapeSpread.push([start]);
             start++;
         }
@@ -67,7 +67,7 @@ export abstract class PageCollection {
             if (i < this.pages.length - 1) this.landscapeSpread.push([i, i + 1]);
             else {
                 this.landscapeSpread.push([i]);
-                this.pages[i].setDensity(PageDensity.HARD);
+                this.pages[i].setDensity(PageDensity.SOFT);
             }
         }
     }
